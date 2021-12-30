@@ -46,9 +46,13 @@ public  class MyJPanel extends JPanel implements MouseMotionListener{
         for(int i=0;i<enemies.size();i++){
             Enemy enemy = enemies.get(i);
             enemy.drawImage(g);
+            
             if(enemies.size()>Number/10+10){
-            enemies.remove(enemy);
-        }
+                enemies.remove(enemy);
+                }
+            else if(enemies.size()>1000){  
+                enemies.remove(enemy);
+            }
 
         }
         for(int i = 0;i<bullets.size();i++){

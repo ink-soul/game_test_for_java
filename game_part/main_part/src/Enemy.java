@@ -15,7 +15,6 @@ public class Enemy {
 
     
 
-
     public ImageIcon getEnemyImage() {
         return enemyImage;
     }
