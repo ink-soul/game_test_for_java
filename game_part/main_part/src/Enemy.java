@@ -58,7 +58,7 @@ public class Enemy {
     public Enemy(){
     Random random = new  Random();
     enemyX = random.nextInt(GameMain.WIDTH-width/2);
-    enemyY = -random.nextInt(GameMain.HEIGHT-height/2);
+    enemyY = random.nextInt(GameMain.HEIGHT-height/2);
     }
     
     public void drawImage(Graphics g){
@@ -68,7 +68,8 @@ public class Enemy {
     }
 
     public void move() {
-        enemyY += 2;//速度控制
+        enemyX -= 1;
+        //enemyY+=2;//速度控制
     }
 
 

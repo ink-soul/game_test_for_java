@@ -1,7 +1,7 @@
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
 public class Bullet {
-    private ImageIcon bulletImage = new ImageIcon("img/bullet.png");
+    private ImageIcon bulletImage = new ImageIcon("img/bulletfire.gif");
 
     private int width = bulletImage.getIconWidth();
     private int height = bulletImage.getIconHeight();
@@ -63,6 +63,6 @@ public class Bullet {
     }
 
     public void move(){
-        y -= 2;
+        x += 2;
     }
 }

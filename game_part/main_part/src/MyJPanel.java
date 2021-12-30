@@ -12,11 +12,11 @@ import java.awt.*;
 public  class MyJPanel extends JPanel implements MouseMotionListener{
 
 
-    private ImageIcon heroImage = new ImageIcon("img/hero.png");
+    private ImageIcon heroImage = new ImageIcon("img/hero.gif");
     private int width = heroImage.getIconWidth();
     private int height = heroImage.getIconHeight();
-    private int heroX =180;
-    private int heroY=440;
+    private int heroX ;
+    private int heroY;
     int Number;
 
     
@@ -89,6 +89,7 @@ public  class MyJPanel extends JPanel implements MouseMotionListener{
         heroX = x-heroImage.getIconWidth()/2;
         heroY = y-heroImage.getIconHeight()/2;
         repaint();
+        
     }
 
     public void init() {
@@ -96,12 +97,9 @@ public  class MyJPanel extends JPanel implements MouseMotionListener{
         int flag = 0;
         while(true){
             flag++;
-            if(flag==15){
-               bullets.add(new Bullet(heroX+width/3, heroY)); 
-               bullets.add(new Bullet(heroX+width/2, heroY));
-               bullets.add(new Bullet(heroX+width*2/3, heroY));
-               bullets.add(new Bullet(heroX-5,heroY+height/2));
-               bullets.add(new Bullet(heroX+width, heroY+height/2));
+            if(flag==100){
+               bullets.add(new Bullet(heroX+width/2, heroY)); 
+               
                flag = 0;
             }
             
@@ -120,7 +118,7 @@ public  class MyJPanel extends JPanel implements MouseMotionListener{
            Enemy en = enemies.get(i);
             en.move();
             //超出屏幕范围后移除对象
-            if(en.getEnemyY()>GameMain.HEIGHT){
+            if(en.getEnemyX()>GameMain.WIDTH){
                 enemies.remove(en);
 
                 enemies.add(new Enemy());
