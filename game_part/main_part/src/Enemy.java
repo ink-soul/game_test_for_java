@@ -56,9 +56,23 @@ public class Enemy {
     }
 
     public Enemy(){
+        int i;
     Random random = new  Random();
-    enemyX = random.nextInt(GameMain.WIDTH-width/2);
-    enemyY = random.nextInt(GameMain.HEIGHT-height/2);
+    enemyX = 1600;
+    i=random.nextInt(5);
+    switch (i){
+        case 1:enemyY=100;
+                break;
+        case 2:enemyY=200;
+                break;
+        case 3:enemyY=300;
+                break;
+        case 4:enemyY=400;
+                break;
+        case 5:enemyY=500;
+                break;
+        default:enemyY=100;
+    }
     }
     
     public void drawImage(Graphics g){
@@ -68,7 +82,7 @@ public class Enemy {
     }
 
     public void move() {
-        enemyX -= 1;
+        enemyX -= 2;
         //enemyY+=2;//速度控制
     }
 
