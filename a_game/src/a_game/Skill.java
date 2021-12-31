@@ -1,3 +1,4 @@
+package a_game;
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
 public class Skill {
@@ -44,6 +45,6 @@ public class Skill {
     }
 
     public void move(){
-        x += 5;
+        x += 20;
     }
 }

@@ -1,23 +1,14 @@
+package a_game;
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
-public class Bullet {
-    private ImageIcon bulletImage = new ImageIcon("img/bulletfire.gif");
-
-    private int width = bulletImage.getIconWidth();
-    private int height = bulletImage.getIconHeight();
-
+public class Bomb {
+    private ImageIcon bombImage = new ImageIcon("img/bomb.png");
+//    private ImageIcon gameover = new ImageIcon("img/gameover.png");
+    private int width=bombImage.getIconWidth();
+    private int height = bombImage.getIconHeight();
     private int x;
     private int y;
-
-
-    
-    public ImageIcon getBulletImage() {
-        return bulletImage;
-    }
-
-    public void setBulletImage(ImageIcon bulletImage) {
-        this.bulletImage = bulletImage;
-    }
+    private  int count;
 
     public int getWidth() {
         return width;
@@ -51,18 +42,31 @@ public class Bullet {
         this.y = y;
     }
 
+    public int getCount() {
+        return count;
+    }
 
+    public void setCount(int count) {
+        this.count = count;
+    }
 
-    public Bullet(int x,int y){
+    public Bomb(int x,int y){
         this.x = x;
         this.y = y;
     }
 
     public void drawImage(Graphics g){
-        g.drawImage(bulletImage.getImage(), x, y, null);
+        g.drawImage(bombImage.getImage(), x, y, null);
+        
+//        for(int i=0;i<5;i++) {
+//     	   g.drawImage(gameover.getImage(), 700, 250, null);
+//        }
     }
 
-    public void move(){
-        x += 2;
+
+    
+
+    public void move() {
+        count++;
     }
 }

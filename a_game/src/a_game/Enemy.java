@@ -1,10 +1,11 @@
+package a_game;
 import java.util.*;
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
 
 
 public class Enemy {
-    private ImageIcon enemyImage = new ImageIcon("img/enemy.png");
+    private ImageIcon enemyImage = new ImageIcon("img/feixingjiangshi.png");
     
 
     private int width = enemyImage.getIconWidth();
@@ -58,7 +59,7 @@ public class Enemy {
     public Enemy(){
         int i;
     Random random = new  Random();
-    enemyX = 1600;
+    enemyX = 800+random.nextInt(800);
     i=random.nextInt(5);
     switch (i){
         case 1:enemyY=100;
@@ -69,7 +70,7 @@ public class Enemy {
                 break;
         case 4:enemyY=400;
                 break;
-        case 5:enemyY=500;
+        case 0:enemyY=500;
                 break;
         default:enemyY=100;
     }
@@ -82,7 +83,7 @@ public class Enemy {
     }
 
     public void move() {
-        enemyX -= 2;
+        enemyX -= 5;
         //enemyY+=2;//速度控制
     }
 

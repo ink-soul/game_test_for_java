@@ -1,3 +1,4 @@
+package a_game;
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,7 +9,7 @@ public static void main(String[] args) {
     
     JFrame jFrame = new JFrame();
     jFrame.setSize(WIDTH,HEIGHT);
-    jFrame.setTitle("飞机大战");
+    jFrame.setTitle("神仙豌豆大战僵尸珍贵影像");
     
     MyJPanel pl = new MyJPanel();
     jFrame.add(pl,0);
